@@ -1,0 +1,14 @@
+package com.example.bai2.repository;
+
+import com.example.bai2.model.entity.TokenSession;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface TokenSessionRepository extends JpaRepository<TokenSession, Long> {
+    Optional<TokenSession> findByRefreshTokenValue(String refreshTokenValue);
+
+    Optional<TokenSession> findByUsername(String username);
+}

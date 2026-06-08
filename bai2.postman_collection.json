@@ -1,0 +1,186 @@
+{
+  "info": {
+    "_postman_id": "45ac48ec-ce90-431f-8eee-ed926c4ddf56",
+    "name": "bai 5",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51874648",
+    "_collection_link": "https://go.postman.co/collection/51874648-45ac48ec-ce90-431f-8eee-ed926c4ddf56?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\":\"sonbui\",\r\n    \"password\":\"sonbui\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/register",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\":\"sonbui\",\r\n    \"password\":\"sonbui\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/login",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJzb25idWkiLCJpYXQiOjE3ODA4MzgyMzUsImV4cCI6MTc4MDg0MTgzNX0.KPlIfkxaXOefUih_Xf57HrWIFRJj83mcBI5KsdrNHHJy8nA4WTteOF_0J9hp1nvf",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/artworks",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "artworks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "refresh",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"token\":\"a8fdfff1-eacc-4031-b16f-53684e90b6e3\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/refresh",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "refresh"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "logout",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJzb25idWkiLCJpYXQiOjE3ODA4MzgyODMsImV4cCI6MTc4MDg0MTg4M30.OqvSH-9DES8rP0Nj3d8EeLqZRuaITeCLUJ4I2bL4CXZzd9bpTEMOFLpo0lSSf_H7",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"token\":\"a8fdfff1-eacc-4031-b16f-53684e90b6e3\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/logout",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}
